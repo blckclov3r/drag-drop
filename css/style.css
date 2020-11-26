@@ -1,7 +1,6 @@
 body{
     background: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 100%;
   }
   
 h2{
@@ -13,7 +12,7 @@ h2{
 
   .file-upload {
     margin: 0 auto;
-    padding: 0 7rem;
+    width: 80%;
   
   }
   
@@ -72,6 +71,19 @@ h2{
     border: 4px dashed #b4b9be;
     transition: all .2s ease;
   }
+
+  .file-upload-contentNCAE {
+    display: none;
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    padding-top: 0;
+    margin-top: 20px;
+    border: 4px dashed #b4b9be;
+    transition: all .2s ease;
+  }
   
   .file-upload-input138 {
     position: absolute;
@@ -98,6 +110,18 @@ h2{
   }
 
   .file-upload-inputPSA {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+    background: #fff;
+  }
+  
+  .file-upload-inputNCAE {
     position: absolute;
     margin: 0;
     padding: 0;
@@ -146,6 +170,18 @@ h2{
     transition: all .2s ease;
   }
 
+  .file-upload-wrapNCAE {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    padding-top: 0;
+    margin-top: 20px;
+    border: 4px dashed #b4b9be;
+    transition: all .2s ease;
+  }
+
   .image-dropping{
     background: #fff;
   }
@@ -174,9 +210,20 @@ h2{
     background-color: #f1f1f1;
     border: 4px dashed rgb(92, 92, 92);
   }
+
+  .image-dropping,.file-upload-wrapNCAE:hover  {
+    background-color: #f1f1f1;
+    border: 4px dashed rgb(92, 92, 92);
+  }
+
   .file-upload-wrapPSA:focus{
     background: #fff;
   }
+
+  .file-upload-wrapNCAE:focus{
+    background: #fff;
+  }
+  
   
   .drag-text {
     text-align: center;
@@ -189,11 +236,6 @@ h2{
     padding: 60px 0;
   }
   
-
-.form-control{
-  
-}
-
   #overlay {
     position: fixed;
     display: none;

@@ -16,7 +16,7 @@
     <div id="text">Drop files to upload</div>
   </div>
 
-  <div class="container my-2">
+  <div class="container my-4">
     <!-- form 138 -->
     <div class="file-upload">
       <div class="file-upload-wrap138">
@@ -72,33 +72,62 @@
     </div>
 
 
-       <!-- PSA  -->
-       <div class="file-upload">
-        <div class="file-upload-wrapPSA">
-          <input class="file-upload-inputPSA" type='file' onchange="readURLPSA(this);" accept="*" />
-          <div class="drag-text">
-            <i class="fa fa-download" style="font-size: 3rem; color: #777;" aria-hidden="true"></i>
-            <p class="pt-3"><u>PSA (Authenticated Birth Certificate)</u></p>
-            <h2 class="">Drop file to upload</h2>
-  
-          </div>
+    <!-- PSA  -->
+    <div class="file-upload">
+      <div class="file-upload-wrapPSA">
+        <input class="file-upload-inputPSA" type='file' onchange="readURLPSA(this);" accept="*" />
+        <div class="drag-text">
+          <i class="fa fa-download" style="font-size: 3rem; color: #777;" aria-hidden="true"></i>
+          <p class="pt-3"><u>PSA (Authenticated Birth Certificate)</u></p>
+          <h2 class="">Drop file to upload</h2>
+
         </div>
-        <div class="file-upload-contentPSA">
-          <div class="drag-text">
-            <i class="fa fa-download" style="font-size: 3rem; color: #777;" aria-hidden="true"></i>
-            <p class="pt-3"><u>PSA (Authenticated Birth Certificate)</u></p>
-            <div class="input-group mt-4">
-              <input id="psa-title" onclick="$('.file-upload-inputPSA').trigger( 'click' )" class="form-control"
-                aria-label="Form-PSA" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" id="psa-title" type="button"
-                  onclick="removeUploadPSA();">Remove</button>
-              </div>
+      </div>
+      <div class="file-upload-contentPSA">
+        <div class="drag-text">
+          <i class="fa fa-download" style="font-size: 3rem; color: #777;" aria-hidden="true"></i>
+          <p class="pt-3"><u>PSA (Authenticated Birth Certificate)</u></p>
+          <div class="input-group mt-4">
+            <input id="psa-title" onclick="$('.file-upload-inputPSA').trigger( 'click' )" class="form-control"
+              aria-label="Form-PSA" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" id="psa-title" type="button"
+                onclick="removeUploadPSA();">Remove</button>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
+
+
+
+    <!-- NCAE  -->
+    <div class="file-upload">
+      <div class="file-upload-wrapNCAE">
+        <input class="file-upload-inputNCAE" type='file' onchange="readURLNCAE(this);" accept="*" />
+        <div class="drag-text">
+          <i class="fa fa-download" style="font-size: 3rem; color: #777;" aria-hidden="true"></i>
+          <p class="pt-3"><u>NCAE Results</u></p>
+          <h2 class="">Drop file to upload</h2>
+
+        </div>
+      </div>
+      <div class="file-upload-contentNCAE">
+        <div class="drag-text">
+          <i class="fa fa-download" style="font-size: 3rem; color: #777;" aria-hidden="true"></i>
+          <p class="pt-3"><u>NCAE Results</u></p>
+          <div class="input-group mt-4">
+            <input id="ncae-title" onclick="$('.file-upload-inputNCAE').trigger( 'click' )" class="form-control"
+              aria-label="Form-NCAE" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" id="ncae-title" type="button"
+                onclick="removeUploadNCAE();">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 

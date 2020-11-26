@@ -10,9 +10,10 @@ function readURL138(input) {
       $('#tor-title').val(input.files[0].name);
     };
     reader.readAsDataURL(input.files[0]);
-  } else {
-    removeUpload138();
-  }
+  } 
+  // else {
+  //   removeUpload138();
+  // }
 }
 
 //good moral character
@@ -25,9 +26,10 @@ function readURLGMoral(input) {
       $('#gm-title').val(input.files[0].name);
     };
     reader.readAsDataURL(input.files[0]);
-  } else {
-    removeUploadGM();
   }
+  //  else {
+  //   removeUploadGM();
+  // }
 }
 
 //good moral character
@@ -40,13 +42,28 @@ function readURLPSA(input) {
       $('#psa-title').val(input.files[0].name);
     };
     reader.readAsDataURL(input.files[0]);
-  } else {
-    removeUploadPSA();
-  }
+  } 
+  // else {
+  //   removeUploadPSA();
+  // }
 }
 
 
-
+// NCAE Results
+function readURLNCAE(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('.file-upload-wrapNCAE').hide();
+      $('.file-upload-contentNCAE').show();
+      $('#ncae-title').val(input.files[0].name);
+    };
+    reader.readAsDataURL(input.files[0]);
+  } 
+  // else {
+  //   removeUploadNCAE();
+  // }
+}
 
 //remove upload form 138
 function removeUpload138() {
@@ -64,7 +81,7 @@ function removeUploadGM() {
   $('.file-upload-wrapGM').show();
 }
 
-//Remove upload psa
+//Remove upload PSA
 function removeUploadPSA() {
   $('.file-upload-inputPSA').replaceWith($('.file-upload-inputPSA').clone());
   $('.file-upload-inputPSA').val(''); //reset upload file
@@ -72,6 +89,13 @@ function removeUploadPSA() {
   $('.file-upload-wrapPSA').show();
 }
 
+//Remove upload NCAE
+function removeUploadNCAE() {
+  $('.file-upload-inputNCAE').replaceWith($('.file-upload-inputNCAE').clone());
+  $('.file-upload-inputNCAE').val(''); //reset upload file
+  $('.file-upload-contentNCAE').hide();
+  $('.file-upload-wrapNCAE').show();
+}
 
 // drag & drop 138
 $('.file-upload-wrap138').bind('dragover', function () {
@@ -105,6 +129,15 @@ $('.file-upload-wrapPSA').bind('dragleave', function () {
 });
 
 
+// drag & drop NCAE
+$('.file-upload-wrapNCAE').bind('dragover', function () {
+
+  $('.file-upload-wrapNCAE').addClass('image-dropping');
+});
+
+$('.file-upload-wrapNCAE').bind('dragleave', function () {
+  $('.file-upload-wrapNCAE').removeClass('image-dropping');
+});
 
 
 //disable opening external file from the dropdown 
