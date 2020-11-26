@@ -1,5 +1,5 @@
 body{
-    background: #f1f1f1;
+    background: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 100%;
   }
@@ -12,9 +12,8 @@ h2{
 }
 
   .file-upload {
-    background-color: #ffffff;
     margin: 0 auto;
-    padding: 20px 7rem;
+    padding: 0 7rem;
   
   }
   
@@ -45,6 +44,7 @@ h2{
     padding-top: 0;
     margin-top: 20px;
     border: 4px dashed #b4b9be;
+    transition: all .2s ease;
   }
 
   .file-upload-contentGM {
@@ -57,8 +57,21 @@ h2{
     padding-top: 0;
     margin-top: 20px;
     border: 4px dashed #b4b9be;
+    transition: all .2s ease;
   }
 
+  .file-upload-contentPSA {
+    display: none;
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    padding-top: 0;
+    margin-top: 20px;
+    border: 4px dashed #b4b9be;
+    transition: all .2s ease;
+  }
   
   .file-upload-input138 {
     position: absolute;
@@ -84,7 +97,7 @@ h2{
     background: #fff;
   }
 
-  .file-upload-inputGM {
+  .file-upload-inputPSA {
     position: absolute;
     margin: 0;
     padding: 0;
@@ -106,7 +119,7 @@ h2{
     padding-top: 0;
     margin-top: 20px;
     border: 4px dashed #b4b9be;
-   
+    transition: all .2s ease;
   }
 
   .file-upload-wrapGM {
@@ -118,22 +131,52 @@ h2{
     padding-top: 0;
     margin-top: 20px;
     border: 4px dashed #b4b9be;
-   
+    transition: all .2s ease;
   }
 
-  
-  .image-dropping,.file-upload-wrap138:hover  {
-    background-color: #fff;
-    border: 4px dashed rgb(92, 92, 92);
-    
+  .file-upload-wrapPSA {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    padding-top: 0;
+    margin-top: 20px;
+    border: 4px dashed #b4b9be;
+    transition: all .2s ease;
   }
+
+  .image-dropping{
+    background: #fff;
+  }
+
+  .image-dropping,.file-upload-wrap138:hover  {
+    background-color: #f1f1f1;
+    border: 4px dashed rgb(92, 92, 92);
+  }
+
+  .file-upload-wrap138:focus{
+    background: #fff;
+  }
+
+
   
   .image-dropping,.file-upload-wrapGM:hover  {
-    background-color: #fff;
+    background-color: #f1f1f1;
     border: 4px dashed rgb(92, 92, 92);
-    
   }
 
+  .file-upload-wrapGM:focus{
+    background: #fff;
+  }
+
+  .image-dropping,.file-upload-wrapPSA:hover  {
+    background-color: #f1f1f1;
+    border: 4px dashed rgb(92, 92, 92);
+  }
+  .file-upload-wrapPSA:focus{
+    background: #fff;
+  }
   
   .drag-text {
     text-align: center;
@@ -147,7 +190,9 @@ h2{
   }
   
 
-
+.form-control{
+  
+}
 
   #overlay {
     position: fixed;
@@ -160,7 +205,6 @@ h2{
     bottom: 0;
     background-color: rgba(0,0,0,0.3);
     cursor: pointer;
-    /* z-index: 1; */
   }
   
   #text{
@@ -172,3 +216,15 @@ h2{
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
   }
+
+  .input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 53%;
+    margin: 0 auto;
+}

@@ -1,6 +1,5 @@
 // JavaScript source code
 
-
 //form 138 
 function readURL138(input) {
   if (input.files && input.files[0]) {
@@ -14,7 +13,6 @@ function readURL138(input) {
   } else {
     removeUpload138();
   }
-  off();
 }
 
 //good moral character
@@ -30,7 +28,21 @@ function readURLGMoral(input) {
   } else {
     removeUploadGM();
   }
-  off();
+}
+
+//good moral character
+function readURLPSA(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('.file-upload-wrapPSA').hide();
+      $('.file-upload-contentPSA').show();
+      $('#psa-title').val(input.files[0].name);
+    };
+    reader.readAsDataURL(input.files[0]);
+  } else {
+    removeUploadPSA();
+  }
 }
 
 
@@ -44,7 +56,7 @@ function removeUpload138() {
   $('.file-upload-wrap138').show();
 }
 
-//Rremove upload good moral character
+//Remove upload good moral character
 function removeUploadGM() {
   $('.file-upload-inputGM').replaceWith($('.file-upload-inputGM').clone());
   $('.file-upload-inputGM').val(''); //reset upload file
@@ -52,58 +64,60 @@ function removeUploadGM() {
   $('.file-upload-wrapGM').show();
 }
 
+//Remove upload psa
+function removeUploadPSA() {
+  $('.file-upload-inputPSA').replaceWith($('.file-upload-inputPSA').clone());
+  $('.file-upload-inputPSA').val(''); //reset upload file
+  $('.file-upload-contentPSA').hide();
+  $('.file-upload-wrapPSA').show();
+}
+
+
 // drag & drop 138
 $('.file-upload-wrap138').bind('dragover', function () {
 
   $('.file-upload-wrap138').addClass('image-dropping');
-  on();
 });
 
 $('.file-upload-wrap138').bind('dragleave', function () {
   $('.file-upload-wrap138').removeClass('image-dropping');
-  off();
 });
 
 // drag & drop Good Moral Character
 $('.file-upload-wrapGM').bind('dragover', function () {
 
   $('.file-upload-wrapGM').addClass('image-dropping');
-  on();
 });
 
 $('.file-upload-wrapGM').bind('dragleave', function () {
   $('.file-upload-wrapGM').removeClass('image-dropping');
-  off();
 });
 
 
+// drag & drop PSA
+$('.file-upload-wrapPSA').bind('dragover', function () {
+
+  $('.file-upload-wrapPSA').addClass('image-dropping');
+});
+
+$('.file-upload-wrapPSA').bind('dragleave', function () {
+  $('.file-upload-wrapPSA').removeClass('image-dropping');
+});
 
 
-
-
-
-//overlay on & off
-function on() {
-  document.getElementById("overlay").style.display = "block";
-
-}
-
-function off() {
-  document.getElementById("overlay").style.display = "none";
-}
 
 
 //disable opening external file from the dropdown 
 window.addEventListener("dragover", function (e) {
   e = e || event;
-  console.log(e);
+  // console.log(e);
   if (e.target.tagName != "INPUT") { // check which element is our target
     e.preventDefault();
   }
 }, false);
 window.addEventListener("drop", function (e) {
   e = e || event;
-  console.log(e);
+  // console.log(e);
   if (e.target.tagName != "INPUT") {  // check which element is our target
     e.preventDefault();
   }

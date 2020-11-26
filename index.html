@@ -16,14 +16,13 @@
     <div id="text">Drop files to upload</div>
   </div>
 
-  <div class="container">
-
+  <div class="container my-2">
     <!-- form 138 -->
     <div class="file-upload">
       <div class="file-upload-wrap138">
         <input class="file-upload-input138" type='file' onchange="readURL138(this);" accept="*" />
         <div class="drag-text">
-          <i class="fa fa-download" style="font-size: 4rem; color: #777;" aria-hidden="true"></i>
+          <i class="fa fa-download" style="font-size: 3rem; color: #777;" aria-hidden="true"></i>
           <p class="pt-3"><u>Form 138 Highschool report card</u></p>
           <h2 class="">Drop file to upload</h2>
 
@@ -31,7 +30,7 @@
       </div>
       <div class="file-upload-content138">
         <div class="drag-text">
-          <i class="fa fa-download" style="font-size: 4rem; color: #777;" aria-hidden="true"></i>
+          <i class="fa fa-download" style="font-size: 3rem; color: #777;" aria-hidden="true"></i>
           <p class="pt-3"><u>Form 138 Highschool report card</u></p>
           <div class="input-group mt-4">
             <input id="tor-title" onclick="$('.file-upload-input138').trigger( 'click' )" class="form-control"
@@ -50,7 +49,7 @@
       <div class="file-upload-wrapGM">
         <input class="file-upload-inputGM" type='file' onchange="readURLGMoral(this);" accept="*" />
         <div class="drag-text">
-          <i class="fa fa-download" style="font-size: 4rem; color: #777;" aria-hidden="true"></i>
+          <i class="fa fa-download" style="font-size: 3rem; color: #777;" aria-hidden="true"></i>
           <p class="pt-3"><u>Certificate of Good Moral Character</u></p>
           <h2 class="">Drop file to upload</h2>
 
@@ -58,7 +57,7 @@
       </div>
       <div class="file-upload-contentGM">
         <div class="drag-text">
-          <i class="fa fa-download" style="font-size: 4rem; color: #777;" aria-hidden="true"></i>
+          <i class="fa fa-download" style="font-size: 3rem; color: #777;" aria-hidden="true"></i>
           <p class="pt-3"><u>Certificate of Good Moral Character</u></p>
           <div class="input-group mt-4">
             <input id="gm-title" onclick="$('.file-upload-inputGM').trigger( 'click' )" class="form-control"
@@ -71,6 +70,34 @@
         </div>
       </div>
     </div>
+
+
+       <!-- PSA  -->
+       <div class="file-upload">
+        <div class="file-upload-wrapPSA">
+          <input class="file-upload-inputPSA" type='file' onchange="readURLPSA(this);" accept="*" />
+          <div class="drag-text">
+            <i class="fa fa-download" style="font-size: 3rem; color: #777;" aria-hidden="true"></i>
+            <p class="pt-3"><u>PSA (Authenticated Birth Certificate)</u></p>
+            <h2 class="">Drop file to upload</h2>
+  
+          </div>
+        </div>
+        <div class="file-upload-contentPSA">
+          <div class="drag-text">
+            <i class="fa fa-download" style="font-size: 3rem; color: #777;" aria-hidden="true"></i>
+            <p class="pt-3"><u>PSA (Authenticated Birth Certificate)</u></p>
+            <div class="input-group mt-4">
+              <input id="psa-title" onclick="$('.file-upload-inputPSA').trigger( 'click' )" class="form-control"
+                aria-label="Form-PSA" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="psa-title" type="button"
+                  onclick="removeUploadPSA();">Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
   </div>
