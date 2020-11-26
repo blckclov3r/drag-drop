@@ -20,8 +20,8 @@
 
     <!-- form 138 -->
     <div class="file-upload">
-      <div class="file-upload-wrap">
-        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="*" />
+      <div class="file-upload-wrap138">
+        <input class="file-upload-input138" type='file' onchange="readURL138(this);" accept="*" />
         <div class="drag-text">
           <i class="fa fa-download" style="font-size: 4rem; color: #777;" aria-hidden="true"></i>
           <p class="pt-3"><u>Form 138 Highschool report card</u></p>
@@ -29,24 +29,49 @@
 
         </div>
       </div>
-      <div class="file-upload-content">
+      <div class="file-upload-content138">
         <div class="drag-text">
           <i class="fa fa-download" style="font-size: 4rem; color: #777;" aria-hidden="true"></i>
           <p class="pt-3"><u>Form 138 Highschool report card</u></p>
           <div class="input-group mt-4">
-            <input id="file-title" onclick="$('.file-upload-input').trigger( 'click' )" class="form-control"
+            <input id="tor-title" onclick="$('.file-upload-input138').trigger( 'click' )" class="form-control"
               aria-label="Form-138" aria-describedby="basic-addon2">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary" id="file-title" type="button"
-                onclick="removeUpload();">Remove</button>
+              <button class="btn btn-outline-secondary" id="tor-title" type="button"
+                onclick="removeUpload138();">Remove</button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Certificate of Good Moral Character -->
+    <div class="file-upload">
+      <div class="file-upload-wrapGM">
+        <input class="file-upload-inputGM" type='file' onchange="readURLGMoral(this);" accept="*" />
+        <div class="drag-text">
+          <i class="fa fa-download" style="font-size: 4rem; color: #777;" aria-hidden="true"></i>
+          <p class="pt-3"><u>Certificate of Good Moral Character</u></p>
+          <h2 class="">Drop file to upload</h2>
 
-    
+        </div>
+      </div>
+      <div class="file-upload-contentGM">
+        <div class="drag-text">
+          <i class="fa fa-download" style="font-size: 4rem; color: #777;" aria-hidden="true"></i>
+          <p class="pt-3"><u>Certificate of Good Moral Character</u></p>
+          <div class="input-group mt-4">
+            <input id="gm-title" onclick="$('.file-upload-inputGM').trigger( 'click' )" class="form-control"
+              aria-label="Form-GM" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" id="gm-title" type="button"
+                onclick="removeUploadGM();">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
   </div>
 
