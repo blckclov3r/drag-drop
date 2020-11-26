@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body id="mBody">
+
+  <div id="overlay" onclick="off()">
+    <div id="text">Drop files to upload</div>
+  </div>
+
+  <div class="container">
+
+    <!-- form 138 -->
+    <div class="file-upload">
+      <div class="file-upload-wrap">
+        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="*" />
+        <div class="drag-text">
+          <i class="fa fa-download" style="font-size: 4rem; color: #777;" aria-hidden="true"></i>
+          <p class="pt-3"><u>Form 138 Highschool report card</u></p>
+          <h2 class="">Drop file to upload</h2>
+
+        </div>
+      </div>
+      <div class="file-upload-content">
+        <div class="drag-text">
+          <i class="fa fa-download" style="font-size: 4rem; color: #777;" aria-hidden="true"></i>
+          <p class="pt-3"><u>Form 138 Highschool report card</u></p>
+          <div class="input-group mt-4">
+            <input id="file-title" onclick="$('.file-upload-input').trigger( 'click' )" class="form-control"
+              aria-label="Form-138" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" id="file-title" type="button"
+                onclick="removeUpload();">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+  </div>
+
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
